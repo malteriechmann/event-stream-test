@@ -19,7 +19,7 @@ $messages = [
 
 while (true) {
   echo "event: ping\n",
-       'data: {"message": "' . $messages[array_rand($messages)] . '"}', "\n\n"; 
+       'data: {"message": "' . $messages[array_rand($messages)]['body'] . '"}', "\n\n"; 
   
   while (ob_get_level() > 0) {
     ob_end_flush();
