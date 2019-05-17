@@ -20,11 +20,9 @@ $messages = [
 while (true) {
   $randomMessage = $messages[array_rand($messages)];
 
-  echo 'event: ping\n';
-  echo 'data: {"time": "' . date(DATE_ISO8601) . '"}';
-  echo '\n\n';
+  echo 'event: ping' . PHP_EOL . 'data: {"time": "' . date(DATE_ISO8601) . '"}' . PHP_EOL . PHP_EOL;
 
-  echo 'data: {"title": "' . $randomMessage['title'] .', "body": "' . $randomMessage['body'] . '"}' . '\n\n';
+  echo 'data: {"title": "' . $randomMessage['title'] .', "body": "' . $randomMessage['body'] . '"}' . PHP_EOL . PHP_EOL;
   
   while (ob_get_level() > 0) {
     ob_end_flush();
