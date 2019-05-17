@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>event-stream-test</title>
+    </head>
+    <body>
+        <script>
+            var eventSource = new EventSource('events.php');
+
+            eventSource.onopen = function() {
+              console.log('Connection opened');
+            };
+
+            eventSource.onmessage = function(event) {
+              console.log('Data: ' + event.data);
+            };
+        </script>
+    </body>
+</html>
