@@ -21,7 +21,7 @@ while (true) {
   $randomMessage = $messages[array_rand($messages)];
 
   echo "event: ping\n",
-       'data: {"title": "' . $randomMessage['title'] .', "body": "' . $randomMessages['body'] . '"}', "\n\n"; 
+       'data: {"title": "' . $randomMessage['title'] .', "body": "' . $randomMessage['body'] . '"}', "\n\n"; 
   
   while (ob_get_level() > 0) {
     ob_end_flush();
